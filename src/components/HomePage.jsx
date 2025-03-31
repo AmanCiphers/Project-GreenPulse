@@ -2,6 +2,7 @@ import React from "react";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faLeaf, faGlobe, faTree } from "@fortawesome/free-solid-svg-icons";
 import "./css/HomePage.css"; // Import the CSS file for animations
+//comment
 
 const HomePage = () => {
     return (
