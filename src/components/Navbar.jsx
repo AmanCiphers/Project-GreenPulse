@@ -31,6 +31,7 @@ const Navbar = () => {
               <DropdownItem to="/causes" text="Causes Page" />
               <DropdownItem to="/news" text="News & Events" />
               <DropdownItem to="/rankings" text="Country Rankings" />
+              <DropdownItem to="/community" text="Community Page" />
             </div>
             )}
           </div>

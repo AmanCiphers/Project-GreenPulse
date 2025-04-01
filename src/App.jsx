@@ -9,6 +9,7 @@ import NewsEvents from './components/News';
 import CountryRankings from './components/Rankings';
 import AboutUs from './components/AboutUs';
 import ClimateChangeImpact from './components/Impact';
+import CommunityPage from './components/Community';
 
 
 function App() {
@@ -24,6 +25,7 @@ function App() {
           <Route path="doomsday" element={<DoomsdayClock />} />
           <Route path="about" element={<AboutUs />} />
           <Route path="impact" element={<ClimateChangeImpact />} />
+          <Route path='community' element={<CommunityPage />} />
         </Route>
       </Routes>
     </Router>
