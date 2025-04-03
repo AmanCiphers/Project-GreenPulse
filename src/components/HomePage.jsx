@@ -1,13 +1,14 @@
 import React from "react";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faLeaf, faGlobe, faTree } from "@fortawesome/free-solid-svg-icons";
-import "./css/HomePage.css"; // Import the CSS file for animations
-//comment
+import "./css/HomePage.css";
+import Carousel from "./Carousel"
+
 
 const HomePage = () => {
     return (
-        <div className="relative flex flex-col items-center justify-center h-[80vh] text-center p-6 overflow-hidden">
-            {/* Scattered Doodles using FontAwesome Icons */}
+        <>
+        <div className="relative flex flex-col items-center justify-center h-[75vh] text-center p-6 overflow-hidden">
             <FontAwesomeIcon
                 icon={faLeaf}
                 className="absolute text-green-500 wobble fa-leaf"
@@ -31,6 +32,10 @@ const HomePage = () => {
                 Learn More
             </button>
         </div>
+
+        <Carousel />
+        </>
+        
     );
 };
 

@@ -10,26 +10,10 @@ const AboutUs = () => {
         organizations with actionable insights and sustainable solutions to
         combat climate change.
       </p>
-      <h2 className="text-2xl font-semibold mb-3">Our Mission</h2>
-      <p className="text-gray-700 mb-6">
-        At Green Pulse, we aim to create awareness about carbon emissions and
-        provide tools to help you make informed decisions towards a greener
-        planet. Whether it’s through carbon tracking, renewable energy
-        solutions, or green initiatives, we are committed to driving
-        sustainability.
-      </p>
-      <h2 className="text-2xl font-semibold mb-3">Why Choose Us?</h2>
-      <ul className="list-disc list-inside text-gray-700 mb-6">
-        <li>Accurate carbon footprint tracking</li>
-        <li>Practical solutions for a sustainable lifestyle</li>
-        <li>Latest news and updates on environmental initiatives</li>
-        <li>A dedicated community of eco-conscious individuals</li>
-      </ul>
-      <h2 className="text-2xl font-semibold mb-3">Join Us</h2>
-      <p className="text-gray-700">
-        Be a part of the movement towards a sustainable future. Explore our
-        solutions and take action today to reduce your environmental impact.
-      </p>
+      
+      <div className="flex justify-center items-center self-center h-150 w-100vw">
+            <h1 className="text-8xl font-serif font-bold">Coming Soon</h1>
+        </div>
     </div>
   );
 };

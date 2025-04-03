@@ -10,6 +10,7 @@ import CountryRankings from './components/Rankings';
 import AboutUs from './components/AboutUs';
 import ClimateChangeImpact from './components/Impact';
 import CommunityPage from './components/Community';
+import Contact from './components/Contact';
 
 
 function App() {
@@ -26,6 +27,7 @@ function App() {
           <Route path="about" element={<AboutUs />} />
           <Route path="impact" element={<ClimateChangeImpact />} />
           <Route path='community' element={<CommunityPage />} />
+          <Route path='contact' element={<Contact />} />
         </Route>
       </Routes>
     </Router>
