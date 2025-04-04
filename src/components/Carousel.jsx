@@ -1,3 +1,4 @@
+import { useState } from 'react';
 import { Swiper, SwiperSlide } from 'swiper/react';
 import { Pagination, Autoplay } from 'swiper/modules';
 import 'swiper/css';
@@ -18,6 +19,16 @@ const Carousel = () => {
         { src: vid4, info: { deaths: "10,000", injured: "50,000", latest: "2025-02-28", next: "2025-03-15" } }
     ];
 
+    const [loaded, setLoaded] = useState(Array(videos.length).fill(false));
+
+    const handleLoaded = (index) => {
+        setLoaded(prev => {
+            const newLoaded = [...prev];
+            newLoaded[index] = true;
+            return newLoaded;
+        });
+    };
+
     return (
         <div className="w-[90%] md:w-[80%] mx-auto mt-5 lg:mt-10">
             <Swiper
@@ -29,15 +40,26 @@ const Carousel = () => {
                     768: { slidesPerView: 2 },
                     1024: { slidesPerView: 4 }
                 }}
-                // navigation
                 pagination={{ clickable: false }}
                 autoplay={{ delay: 4000 }}
                 loop
             >
                 {videos.map((video, index) => (
                     <SwiperSlide key={index}>
-                        <div className="video-container shadow-lg">
-                            <video src={video.src} autoPlay loop muted className="video"></video>
+                        <div className="video-container relative shadow-lg">
+                            {!loaded[index] && (
+                                <div className="absolute inset-0 flex items-center justify-center bg-gray-200 animate-pulse z-10">
+                                    <span className="text-gray-600">Loading...</span>
+                                </div>
+                            )}
+                            <video
+                                src={video.src}
+                                autoPlay
+                                loop
+                                muted
+                                className="video"
+                                onLoadedData={() => handleLoaded(index)}
+                            ></video>
                             {video.info && (
                                 <div className="overlay flex flex-col p-4">
                                     <p className="text-left text-lg md:text-xl lg:text-2xl">
@@ -62,4 +84,4 @@ const Carousel = () => {
     );
 };
 
-export default Carousel ;
+export default Carousel;
